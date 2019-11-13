@@ -10,6 +10,10 @@ class AlbumsController < ApplicationController
     def new
     end
 
+    def edit
+        @album = Album.find(params[:id])
+    end
+
     def create
         @album = Album.new(album_params)
 

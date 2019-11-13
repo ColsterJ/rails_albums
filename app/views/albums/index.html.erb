@@ -1,0 +1,21 @@
+<h1>Listing albums, kids</h1>
+ 
+<%= link_to 'Add an album', new_album_path %>
+
+<table>
+  <tr>
+    <th>Album Name</th>
+    <th>Artist</th>
+    <th>Year</th>
+    <th></th>
+  </tr>
+ 
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.album_name %></td>
+      <td><%= album.artist %></td>
+      <td><%= album.year %></td>
+      <td><%= link_to 'Show', album_path(album) %></td>
+    </tr>
+  <% end %>
+</table>
